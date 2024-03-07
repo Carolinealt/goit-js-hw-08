@@ -88,7 +88,9 @@ createMarkup(images);
 
 gallery.addEventListener("click", (e) => {
   e.preventDefault();
-
+  if (e.target !== "IMG") {
+    return;
+  }
   console.log(e.target.dataset.source);
 
   basicLightbox
